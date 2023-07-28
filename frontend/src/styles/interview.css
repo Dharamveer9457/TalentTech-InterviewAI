@@ -1,0 +1,24 @@
+h2{
+    color: #007bff;
+}
+.top{
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+    gap: 20px;
+}
+.top>div{
+    width: 40%;
+    display: flex;
+    gap: 40px;
+    justify-content: flex-start;
+}
+.top>div>select{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+

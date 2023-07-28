@@ -1,0 +1,22 @@
+/* ChatBubble.css */
+.chat-bubble {
+    max-width: 80%;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+  }
+  
+  .user {
+    background-color: #8cc8ff;
+    color: #fff;
+    float: left;
+  }
+  
+  .agent {
+    background-color: #fff;
+    color: #333;
+    float: right;
+  }
+  
+  /* Chat.css */
+  
