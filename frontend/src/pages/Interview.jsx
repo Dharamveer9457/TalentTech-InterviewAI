@@ -5,7 +5,7 @@ import Chat from '../components/Chat'
 const Interview = () => {
   return (
     <div>
-       <h2>TalentTech Interview</h2>
+       {/* <h2>TalentTech Interview</h2> */}
       <div className='top'>
         <div>
          <select>
