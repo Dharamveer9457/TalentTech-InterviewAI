@@ -2,24 +2,36 @@
 import React, { useState, useRef, useEffect } from 'react';
 import ChatBubble from './ChatBubble';
 import "../styles/chat.css"
+import axios from 'axios';
+import { baseUrl } from '../url';
 
-const Chat = () => {
+const Chat = ({track}) => {
   const [messages, setMessages] = useState([
-    { type: 'agent', content: "Hi there! I'm your virtual assistant." },`"\\n"`
+    { type: 'agent', content: "Hi there! let's begin the interview" },`"\\n"`
     // Add more initial messages here
   ]);
   const userMessageInputRef = useRef(null);
 
   const handleSendMessage = () => {
     const message = userMessageInputRef.current.value.trim();
-    if (message !== '') {
+    
+    const data = {track ,prompt:message}
+    console.log(track,prompt , message);
+    console.log(data);
+    axios.post(`${baseUrl}/chatPrompt`,data)
+    .then(res=> 
+         { if (message !== '') {
       setMessages(prevMessages => [
         ...prevMessages,
         { type: 'user', content: message },
-        { type: 'agent', content: `I received: ${message}` },
+        { type: 'agent', content: ` ${res.data.res}` },
       ]);
       userMessageInputRef.current.value = '';
-    }
+    }}
+    )
+    .catch(err=>console.log(err))
+    
+
   };
 
   useEffect(() => {

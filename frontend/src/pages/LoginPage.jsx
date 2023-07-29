@@ -20,28 +20,15 @@ const LoginPage = () => {
     useEffect(() => {
       localStorage.setItem('ch-token', JSON.stringify({loggedInUser, token}));
       if (token) {
-        // toast({
-        //   description: "User is Login successfull",
-        //   status: 'success',
-        //   isClosable: true,
-        //   duration: 4000,
-        //   position: 'top'
-        // })
+        
         alert("User Logged In successfully")
-  
+
         setTimeout(() => {
           navigate('/interview');
           window.location.reload();
         }, 1000)
-      } else {
+      } else{
         alert("Wrong credential")
-        // toast({
-        //   description: errorMsg,
-        //   status: 'error',
-        //   isClosable: true,
-        //   duration: 4000,
-        //   position: 'top'
-        // })
       }
     }, [isAuth, errorMsg, token])
   

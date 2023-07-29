@@ -9,7 +9,7 @@ const Register = () => {
   const [password, setPassword] = useState("")
   const [name ,setName] = useState("");
   const dispatch = useDispatch();
-  const {isRegistered} = useSelector(store => store.authReducer)
+  const {isRegistered,errorMsg} = useSelector(store => store.authReducer)
   // const { isRegistered, errorMsg } = useSelector(store => store.authReducer);
   // const navigate = useNavigate()
   // const toast = useToast();
@@ -20,27 +20,27 @@ const Register = () => {
     dispatch(signup(details))
   }
 
-  // useEffect(() => {
-  //   if (isRegistered) {
-  //     alert(isRegistered)
-  //     // toast({
-  //     //   description: isRegistered,
-  //     //   status: 'success',
-  //     //   isClosable: true,
-  //     //   duration: 4000,
-  //     //   position: 'top'
-  //     // })
-  //   } else if (errorMsg) {
-  //     alert(errorMsg)
-  //     // toast({
-  //     //   description: errorMsg,
-  //     //   status: 'error',
-  //     //   isClosable: true,
-  //     //   duration: 4000,
-  //     //   position: 'top'
-  //     // })
-  //   }
-  // }, [isRegistered, errorMsg])
+  useEffect(() => {
+    if (isRegistered) {
+      alert(isRegistered)
+      // toast({
+      //   description: isRegistered,
+      //   status: 'success',
+      //   isClosable: true,
+      //   duration: 4000,
+      //   position: 'top'
+      // })
+    } else if (errorMsg) {
+      alert(errorMsg)
+      // toast({
+      //   description: errorMsg,
+      //   status: 'error',
+      //   isClosable: true,
+      //   duration: 4000,
+      //   position: 'top'
+      // })
+    }
+  }, [isRegistered, errorMsg])
 
 
 
