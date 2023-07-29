@@ -12,7 +12,7 @@ import {
     auth: false,
     errorMsg : '',
     token: '',
-    loggedInUser : ''
+    loggedInUser : false
   };
   
   export const reducer = (state = initialState, { type, payload }) => {
@@ -20,7 +20,7 @@ import {
       case AUTH_FAILURE:
         return { ...state, isloading: false, isError: true, errorMsg : payload };
       case LOGIN_SUCCESS:
-        return { ...state, isloading: false, isError : false, auth: true, token: payload.token, loggedInUser : payload.name};
+        return { ...state, isloading: false, isError : false, auth: true, token: payload.token, loggedInUser : true};
       case AUTH_REQUEST:
         return { ...state, isloading: true, isError: false };
       case REGISTER_SUCCESS:

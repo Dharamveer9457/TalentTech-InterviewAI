@@ -1,8 +1,20 @@
 import React from 'react'
 import "../styles/interview.css"
 import Chat from '../components/Chat'
+import { useDispatch } from 'react-redux'
+import { logout } from '../redux/authreducer/action'
 
 const Interview = () => {
+	const user = JSON.parse(localStorage.getItem("ch-token"))
+  const token = localStorage.getItem('ch-token') || '';
+  const dispatch = useDispatch()
+
+  const handleLogout = ()=> {
+			localStorage.removeItem("ch-token")
+			dispatch(logout(token))
+			window.location.reload(true);
+  }
+
   return (
     <div>
        {/* <h2>TalentTech Interview</h2> */}
@@ -24,6 +36,7 @@ const Interview = () => {
          <div>
          <button>Start Interview</button>
          <button>Finish Interview</button>
+         <button onClick={handleLogout}>Logout</button>
          </div>
       </div>
       <hr />
