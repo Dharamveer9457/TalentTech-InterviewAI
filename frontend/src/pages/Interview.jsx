@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "../styles/interview.css"
 import Chat from '../components/Chat'
 import { useDispatch } from 'react-redux'
-import { logout } from '../redux/authreducer/action'
+import { logout } from '../redux/authReducer/action'
 import axios from 'axios'
 import { baseUrl } from '../url'
 
