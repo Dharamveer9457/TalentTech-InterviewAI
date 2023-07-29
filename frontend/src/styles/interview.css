@@ -2,18 +2,24 @@ h2{
     color: #007bff;
 }
 .top{
-    padding: 20px;
+    padding: 10px;
     width: 90%;
     margin: auto;
     display: flex;
     justify-content:space-between;
     gap: 20px;
 }
-.top>div{
+.top>div:nth-child(1){
     width: 40%;
     display: flex;
     gap: 40px;
     justify-content: flex-start;
+}
+.top>div:nth-child(2){
+    width: 40%;
+    display: flex;
+    gap: 40px;
+    justify-content: flex-end;
 }
 .top>div>select{
     padding: 10px;
