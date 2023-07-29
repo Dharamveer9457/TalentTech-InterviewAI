@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, Link } from 'react-router-dom';
-import { signup } from '../redux/authreducer/action';
+import { signup } from '../redux/authReducer/action';
 
 
 const Register = () => {
