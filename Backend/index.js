@@ -25,19 +25,19 @@ const openAI = new OpenAIApi(
 
 let conversationHistory = [];
 
-const generateSystemPrompt = (track) => {
+const generateSystemPrompt = (field) => {
   return {
     role: "system",
-    content: `You are an interviewer. Ask me 3 questions related to ${track}, one after the other. You should go to the next question only after I give an answer to the already asked question. 
+    content: `You are an interviewer. Ask me 3 questions related to ${field}, one after the other. You should go to the next question only after I give an answer to the already asked question. 
     Give me feedback at the end and give me rating out of 10. Feedback will gonna be calculate on three parameters that is communication skills, technical knowledge and problem solving.`,
   };
 };
 
 app.post("/chatPrompt", async (req, res) => {
   try {
-    const { track, prompt } = req.body;
+    const { field, prompt } = req.body;
     if (conversationHistory.length === 0) {
-      conversationHistory.push(generateSystemPrompt(track));
+      conversationHistory.push(generateSystemPrompt(field));
       conversationHistory.push({
         role: "assistant",
         content: "Great, let's start the interview",
@@ -88,9 +88,9 @@ app.use(auth);
 
 app.post("/posthistory", async (req, res) => {
   let obj = {};
-  obj.userID = req.body.userID; // Corrected key name
-  obj.title = req.body.title;
-  obj.track = req.body.track;
+  obj.userID = req.body.usID; // Corrected key name
+  obj.title = req.body.titlere;
+  obj.field = req.body.field;
   obj.type = req.body.type;
   // Make sure to import the correct model name
   try {
