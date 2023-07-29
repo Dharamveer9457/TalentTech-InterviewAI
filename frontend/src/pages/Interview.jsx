@@ -24,7 +24,8 @@ const Interview = () => {
     }
     console.log(data);
     axios.post(`${baseUrl}/chatPrompt`,data)
-    .then(res=>console.log(res.data.res))
+    .then(res=>
+    alert(res.data.res))
     .catch(err=>console.log(err))
     console.log(level,category)
   }
@@ -35,7 +36,7 @@ const Interview = () => {
       prompt:"Finish The interview and give the Feedback on the basis of communication skill , technical skill ,problem solving , and critical thinking "
      }
     axios.post(`${baseUrl}/chatPrompt`,finishPrompt)
-    .then(res=>console.log(res))
+    .then(res=> alert(res.data.res))
     .catch(err=>console.log(err))
     console.log(level,category)
   }
