@@ -28,7 +28,7 @@ Backend of this applcation is made using:
 
 # Contributors:- 
 
-Dharamveer - [Github](https://github.com/Dharamveer9457)
-Ankit Singh - [Github](https://github.com/ank501)
-Sourabh - [Github](https://github.com/sourabhkt1997)
-Alka Trivedi - [Github](https://github.com/Alka0814)
+Dharamveer - [Github](https://github.com/Dharamveer9457)<br>
+Ankit Singh - [Github](https://github.com/ank501)<br>
+Sourabh - [Github](https://github.com/sourabhkt1997)<br>
+Alka Trivedi - [Github](https://github.com/Alka0814)<br>
