@@ -6,8 +6,10 @@ import '../styles/navbar.css';
 const Navbar = () => {
   return (
     <nav className="navbar">
-        <h3>TalentTech</h3>
       <ul className="nav-links">
+        <li>
+          <Link to="/">TalentTech</Link>
+        </li>
         <li>
           <Link to="/interview">Interview</Link>
         </li>
@@ -16,6 +18,9 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="/login">Login</Link>
+        </li>
+        <li>
+          <Link to="/register">Signup</Link>
         </li>
       </ul>
     </nav>

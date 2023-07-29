@@ -1,8 +1,8 @@
 /* Chat.css */
 .chat-container {
-  width: 80%;
-  max-width: 800px;
-  margin: 0 30% ;
+  width: 90%;
+  /* max-width: 800px; */
+  margin: auto;
   padding: 20px;
   background-color: #f0f0f0;
   border-radius: 8px;

@@ -26,7 +26,7 @@ export const login = (userData) => (dispatch) => {
       dispatch({type : LOGIN_SUCCESS, payload : res.data})
    })
    .catch(error => {
-     dispatch({type : AUTH_FAILURE, payload : error.response.data.msg})
+     dispatch({type : AUTH_FAILURE, payload : error.response.data.message})
    })
 }
 
