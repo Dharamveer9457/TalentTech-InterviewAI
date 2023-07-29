@@ -5,7 +5,7 @@ import Chat from '../components/Chat'
 const Interview = () => {
   return (
     <div>
-       <h2>TalentTech Interview</h2>
+       {/* <h2>TalentTech Interview</h2> */}
       <div className='top'>
         <div>
          <select>
@@ -21,11 +21,12 @@ const Interview = () => {
           <option value="advance">Advance</option>
          </select>
          </div>
+         <div>
          <button>Start Interview</button>
+         <button>Finish Interview</button>
+         </div>
       </div>
       <hr />
-      {/* <input type="text" name="" id="" />
-      <button>Submit</button> */}
       <Chat/>
     </div>
   )
