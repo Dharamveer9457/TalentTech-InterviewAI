@@ -26,9 +26,9 @@ Backend of this applcation is made using:
 # UI Images:-
 
 
-# Contributors:- 
+## Contributors:- 
 
-Dharamveer - [Github](https://github.com/Dharamveer9457)<br>
-Ankit Singh - [Github](https://github.com/ank501)<br>
-Sourabh - [Github](https://github.com/sourabhkt1997)<br>
-Alka Trivedi - [Github](https://github.com/Alka0814)<br>
+Dharamveer - [Github](https://github.com/Dharamveer9457)<br><br>
+Ankit Singh - [Github](https://github.com/ank501)<br><br>
+Sourabh - [Github](https://github.com/sourabhkt1997)<br><br>
+Alka Trivedi - [Github](https://github.com/Alka0814)<br><br>
