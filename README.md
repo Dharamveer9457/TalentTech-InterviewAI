@@ -11,6 +11,7 @@ their interview skills in a safe, supportive, and immersive virtual environment.
 ## Tech Stacks Used:-
 Frontend of this application is made using:
 * React
+* Redux
 
 Backend of this applcation is made using:
 * Javascript
