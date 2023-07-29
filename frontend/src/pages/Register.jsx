@@ -30,15 +30,6 @@ const Register = () => {
       //   duration: 4000,
       //   position: 'top'
       // })
-    } else if (errorMsg) {
-      alert(errorMsg)
-      // toast({
-      //   description: errorMsg,
-      //   status: 'error',
-      //   isClosable: true,
-      //   duration: 4000,
-      //   position: 'top'
-      // })
     }
   }, [isRegistered, errorMsg])
 

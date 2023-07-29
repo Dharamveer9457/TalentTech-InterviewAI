@@ -28,7 +28,7 @@ const LoginPage = () => {
           window.location.reload();
         }, 1000)
       } else{
-        alert("Wrong credential")
+        alert("Please Login first")
       }
     }, [isAuth, errorMsg, token])
   
