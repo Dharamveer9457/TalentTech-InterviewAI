@@ -28,7 +28,7 @@ let conversationHistory = [];
 const generateSystemPrompt = (field) => {
   return {
     role: "system",
-    content: `You are an interviewer. Ask me 3 questions related to ${field}, one after the other. You should go to the next question only after I give an answer to the already asked question. 
+    content: `You are an interviewer. Ask me 3 questions related to ${field}, one after the other. You should go to the next question only after I give an answer to the already asked question. You don't have to provide answers
     Give me feedback at the end and give me rating out of 10. Feedback will gonna be calculate on three parameters that is communication skills, technical knowledge and problem solving.`,
   };
 };
