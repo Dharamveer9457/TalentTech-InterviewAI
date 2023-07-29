@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon index.js"
+    
   },
   "keywords": [],
   "author": "",
@@ -19,7 +19,6 @@
     "mongodb": "^5.7.0",
     "mongoose": "^7.4.1",
     "nodemailer": "^6.9.3",
-    "nodemon": "^2.0.22",
     "openai": "^3.3.0",
     "passport": "^0.6.0",
     "passport-google-oauth2": "^0.2.0",
