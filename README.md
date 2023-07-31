@@ -14,7 +14,7 @@ Frontend of this application is made using:
 * Redux
 
 Backend of this applcation is made using:
-* Javascript
+* NodeJS
 * OpenAI API for AI Powering
 * MongoDB Atlas for database
 
