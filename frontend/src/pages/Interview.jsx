@@ -31,7 +31,7 @@ const Interview = () => {
     console.log(data.prompt);
     axios.post(`${baseUrl}/chatPrompt`,data)
     .then(res=>
-    alert('Type lets start in the chat'))
+    alert(`Type ${'lets start interview'} in  the chat to start your interview`))
     .catch(err=>console.log(err))
     console.log(level,category)
   }
