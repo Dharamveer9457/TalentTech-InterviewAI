@@ -50,6 +50,7 @@ const Interview = () => {
   const handleLogout = ()=> {
 			localStorage.removeItem("ch-token")
 			dispatch(logout(token))
+      alert("Logged out successfull")
 			window.location.reload(true);
   }
 
