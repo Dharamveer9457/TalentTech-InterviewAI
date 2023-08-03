@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, redirect } from 'react-router-dom';
 import { signup } from '../redux/authReducer/action';
 
 
@@ -9,9 +9,9 @@ const Register = () => {
   const [password, setPassword] = useState("")
   const [name ,setName] = useState("");
   const dispatch = useDispatch();
-  const {isRegistered,errorMsg} = useSelector(store => store.authReducer)
+  const {isRegistered,errorMsg ,regError } = useSelector(store => store.authReducer)
   // const { isRegistered, errorMsg } = useSelector(store => store.authReducer);
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
   // const toast = useToast();
 
   const handleSignup = (e) => {
@@ -21,17 +21,17 @@ const Register = () => {
   }
 
   useEffect(() => {
+    console.log(regError );
     if (isRegistered) {
       alert(isRegistered)
-      // toast({
-      //   description: isRegistered,
-      //   status: 'success',
-      //   isClosable: true,
-      //   duration: 4000,
-      //   position: 'top'
-      // })
+      setTimeout(() => {
+        navigate('/login');
+        window.location.reload();
+      }, 1000)
+    }else if (regError ){
+      alert(regError )
     }
-  }, [isRegistered, errorMsg])
+  }, [isRegistered ,regError  ])
 
 
 

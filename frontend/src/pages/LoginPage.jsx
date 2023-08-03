@@ -27,8 +27,8 @@ const LoginPage = () => {
           navigate('/interview');
           window.location.reload();
         }, 1000)
-      } else{
-        alert("Please Login first")
+      } else if(errorMsg){
+        alert(errorMsg)
       }
     }, [isAuth, errorMsg, token])
   

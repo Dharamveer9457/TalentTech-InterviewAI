@@ -19,7 +19,7 @@ const Interview = () => {
   // 
 
  useEffect(()=>{
-  setPrompt(`You are an interviewer. Ask me 3 technical questions of  ${level} level related to ${track} stack, one by one only after getting response for previous question. You should go to the next question only after I give an answer to the already asked question.Give me feedback at the end and give me rating out of 10. Feedback will gonna be calculate on three parameters that is communication skills, technical knowledge and problem solving.`)
+  setPrompt(`You are an interviewer. Ask me 3 technical questions of  ${level} level related to ${track} track, one by one only after getting response for previous question. You should go to the next question only after I give an answer to the already asked question.Give me feedback at the end and give me rating out of 10. Feedback will gonna be calculate on three parameters that is communication skills, technical knowledge and problem solving.`)
  },[level ,track])
 
 
